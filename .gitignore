@@ -20,6 +20,9 @@ styles.txt
 
 /gui/game/gui
 
+gui/
+tl/
+
 /android
 /build
 /dist
