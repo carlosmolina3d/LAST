@@ -871,7 +871,6 @@ style slider_button_text:
 style slider_vbox:
     xsize 450
 
-
 ## History screen ##############################################################
 ##
 ## This is a screen that displays the dialogue history to the player. While

@@ -1,0 +1,8 @@
+Random intro:
+show ship somewhere in space.
+Text above describing what is going on.
+
+Start as a different "person" each time.
+
+Change camera to person. Present Dialogue, and options.
+

@@ -1,0 +1,26 @@
+Class I think I need:
+Creature, Crew, Ship, Location
+
+Creature is controlled by the player or AI
+
+Ship is a means of transportation
+
+Location has a name, temperature, atmosphere
+
+Event based game play.
+
+
+
+
+
+Game:
+
+Starts by asking the player if they want to play a new story, or generate their own crew.
+
+If story mode is chosen the player is assigned a random name, job, and starting event.
+
+If mode is chosen the player picks their own crew, names, and starting point.
+
+
+Create the starting events:
+Prisoner in Prison
