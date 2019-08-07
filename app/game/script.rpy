@@ -7,6 +7,33 @@ label start:
     # pick a Random start() from an array
 
     # Ask if they want to play story mode or make a custom crew
+
+
+    #########################################
+    # Tests
+    #########################################
+
+    'This is the pre start testing.'
+
+    # '[will only get attributes. Not run functions]'
+
+    # Need to name the Characters. Can't autoname them in init.
+    $ test.autoNamer()
+
+    # speakers name, grabbing a variable
+    '[test.name]' 'My name is [test.name]'
+
+    # speakers name using a method
+    '[test.name]' 'My name is method [test.getName]'
+
+
+
+
+
+    #########################################
+    # Works!!!!
+    #########################################
+
     menu():
         'Do you want to play story mode, or generate your own crew members?'
 

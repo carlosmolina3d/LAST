@@ -1,56 +1,39 @@
-# Creature Class
+# Controlled by AI or Player
 
 init python:
     class Creature(object):
-        '''Controlled by the user or AI.'''
+        # Tuple of random names
+        names = (
+        'Katie', 'Lucy', 'Lilly', 'Sara', 'Anna', 'Leah', 'Star', 'Cheryl', 'Tara',
+        'Cybele', 'Artemis', 'Lara', 'Amy', 'Kelly', 'Kimberly', 'Kim', 'Maria',
+        'Susan', 'Ashley', 'Carly', 'Michelle', 'Candy', 'Danielle', 'Gwen', 'Heather',
+        'Ivana', 'Jill', 'Nancy', 'Pearl', 'Queen', 'Rima', 'Ursula', 'Viola',
+        'Wendy', 'Xena', 'Zara'
+        )
 
         # Properties
-        girlList = []
 
         # Constructor
-        def __init__(self, name='Name', mood='Neutral', stats=None):
+        def __init__(self):
+            self.name = ''
+            self.job = ''
+            self.character = Character(self.name, image='')
+
+        def setName(self, name):
+            # String -> None
             self.name = name
-            self.mood = mood
-            self.stats = stats
 
+        def getName(self):
+            # None -> String
+            return self.name
 
-        # Partner methods
-        def addMember(self, creature):
-            '''creature -> Screen
-            Assigns creature to your crew.'''
+        def setJob(self, job):
+            # Job -> None
+            self.job = job
 
-            # Check to see if you have a partner and if so, terminate that partnership.
-            if self.partner != None:
-                self.partner.partner = None
-                self.partner = otherGirl
+        def getJob(self):
+            # None -> Job
+            return self.job
 
-            else:
-                self.partner = otherGirl
-
-            # Check to see if otherGirl has  a partner and if so, terminate that partnership.
-            if otherGirl.partner != None:
-                otherGirl.partner.partner = None
-                otherGirl.partner = self
-
-            else:
-                otherGirl.partner = self
-            return renpy.say(avatar, "You have a new partner! %s!" % (otherGirl.name))
-
-        def removePartner(self):
-            '''otherGirl -> Screen
-            Removes otherGirl from the partnership.'''
-
-            if self.partner == None:
-                return renpy.say(avatar, "You don't have a partner.")
-
-            else:
-                renpy.say(avatar, "You are no longer partners with %s." % (self.partner.name))
-                self.partner.partner = None
-                self.partner = None
-
-        # dosent belong in creatures
-        # # Currency methods
-        # def updateGems(self, factor):
-        #     '''Interger -> None
-        #     Does addition to the amount of gems you have by factor.'''
-        #     self.gems += factor
+        def autoNamer(self):
+            self.name = renpy.random.choice(self.names)

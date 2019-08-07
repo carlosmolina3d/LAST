@@ -1,0 +1,30 @@
+##################
+Starting Events
+##################
+
+Wake up alone on a small station...
+
+Ship is drifting endlessly...
+
+You are a prisoner...
+
+
+
+##################
+General Events
+##################
+
+A prisoner you encounter asks you to hear his story...
+
+One of your crew members is a spy...
+
+
+
+##################
+Story Events
+##################
+
+Something large bumped into your ship...
+
+One of your crew members gets kidnapped...
+
