@@ -9,18 +9,26 @@ Location has a name, temperature, atmosphere
 
 Event based game play.
 
-
-
-
-
 Game:
 
 Starts by asking the player if they want to play a new story, or generate their own crew.
 
 If story mode is chosen the player is assigned a random name, job, and starting event.
 
-If mode is chosen the player picks their own crew, names, and starting point.
+If free mode is chosen the player picks their own crew, names, and starting point.
 
 
-Create the starting events:
-Prisoner in Prison
+
+Images:
+Are 2000px tall. Need to be scaled to 1/2 at least.
+
+Image name should be the race.
+First tag is the pose.
+Second tag is the suit.
+
+Human NeutralPose DaySuit
+Machine MadPose NoSuit
+
+Possibly add hair color / styles, and use Composite.
+
+Poses:

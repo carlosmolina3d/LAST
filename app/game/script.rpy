@@ -1,6 +1,9 @@
 ﻿# The 7th saga
 # FTL
 
+# Images
+# Should probably be init in Creature.rpy. No need. Just suit variable.
+
 label start:
     # Init objects in 000_Objects.rpy first
     # Multiple random starts
@@ -13,7 +16,7 @@ label start:
     # Tests
     #########################################
 
-    'This is the pre start testing.'
+    'This is the testing area.'
 
     # '[will only get attributes. Not run functions]'
 
@@ -23,8 +26,25 @@ label start:
     # speakers name, grabbing a variable
     '[test.name]' 'My name is [test.name]'
 
-    # speakers name using a method
-    '[test.name]' 'My name is method [test.getName]'
+    # speakers name using a method wont work
+    # '[test.name]' 'My name is method [test.getName()]'
+
+
+    # dispalys image, scales it, positions it. Changes image.
+
+    show test suit:
+        zoom 0.5
+        xalign 0.5
+    'Just a minute now'
+
+    show test suit blue:
+        zoom 0.5
+        xalign 1.0
+    'Just changed suits'
+
+
+    # !!!
+    # set up images by tags. Image pose suit
 
 
 
@@ -66,12 +86,14 @@ label start:
         'This is the [job] entry point.'
         jump chapterOne
 
+    # expression evalutes the variable before the jump
     jump expression job
 
     # Make your own custom crew -> Names, jobs, maybe pics
 
     # Chapter One after intro path
     label chapterOne:
+        # test code. Names should come from Creature.rpy
         $ friend = renpy.random.choice(names)
         'So your a [job]. That is good news. We really need one right now.'
         'You should talk to [friend].'
